@@ -1,0 +1,140 @@
+@import url('https://fonts.google.com/specimen/Lexend+Deca');
+@import url('https://fonts.google.com/specimen/Big+Shoulders+Display');
+:root{
+    /* COLORS */
+    /*PRIMARY COLORS  */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /* neutal colors */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray : hsl(0, 0%, 95%);
+        /* layout sizing */
+--primary-border-radius:0.4375rem;
+--primary-padding:3rem;
+--border-sizing:0.125rem;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    height: 100%;
+    font-size: 0.9375rem;
+    padding: 0.625rem 4.375rem;
+    background-color: var(--Very-light-gray);
+}
+section{
+    display: flex;
+    flex-direction: column;
+padding: 1.25rem 1.5rem;
+}
+img{
+    height: 30%;
+    width: 30%;
+}
+.sedans{
+    background-color: var(--Bright-orange);
+    border-top-left-radius:var(--primary-border-radius);
+    border-top-right-radius: var(--primary-border-radius);
+}
+.suvs{
+    background-color: var(--Dark-cyan);
+}
+.luxury{
+background-color: var(--Very-dark-cyan);
+border-bottom-left-radius: var(--primary-border-radius);
+border-bottom-right-radius: var(--primary-border-radius);
+}
+h1,h2,h3{
+    color: var(--Very-light-gray);
+    padding-top: var(--primary-padding);
+    padding-bottom: 1.5625rem;
+    font-family: 'Big shoulders Display';
+    font-weight: 700;
+
+}
+p{
+    color: var(--Transparent-white);
+    padding-bottom: var(--primary-padding);
+}
+button{
+    background-color: var(--Very-light-gray);
+    font-family: 'lexend Deca';
+    font-weight: 400;
+    height: 2.1875rem;
+    width: 6.875rem;
+    border-radius: 2.5rem;
+    border: none;
+}
+.button-sedans{
+    color: var(--Bright-orange);
+}
+.button-suvs{
+    color: var(--Dark-cyan);
+}
+.button-luxury{
+    color: var(--Very-dark-cyan);
+}
+.button-sedans:hover,.button-sedans:focus-visible{
+    background-color: var(--Bright-orange);
+    color: var(--Transparent-white);
+    cursor: pointer;
+    border: var(--border-sizing) solid var(--Transparent-white);
+    transition:  0.1s ease-out;
+    scale: 1.1;
+}
+.button-suvs:hover,.button-suvs:focus-visible{
+    background-color: var(--Dark-cyan);
+    color: var(--Transparent-white);
+    border: var(--border-sizing) solid var(--Transparent-white);
+    cursor: pointer;
+    transition:  0.1s ease-out;
+    scale: 1.1;
+}
+.button-luxury:hover,.button-luxury:focus-visible{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Transparent-white);
+    border: var(--border-sizing) solid var(--Transparent-white);
+    cursor: pointer;
+    transition:  0.1s ease-out;
+    scale: 1.1;
+}
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+         /* laptop design */
+@media screen and (min-width:480px) {
+   body{
+     display: grid; 
+       grid-template-columns: repeat(3,auto) ;
+       min-height: 100vh;
+       margin: 5rem 11.25rem;
+   } 
+   section{
+       position: relative;
+   }
+   img{
+    height: 10%;
+    width: 18%;
+}
+   .sedans{
+    border-top-left-radius: var(--primary-border-radius);
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--primary-border-radius);
+}
+   .luxury{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius:var(--primary-border-radius);
+    border-top-right-radius: var(--primary-border-radius);
+    }
+    button{
+        position: absolute;
+        left: 2.2rem;
+        bottom: 3.25rem;
+    }
+}
